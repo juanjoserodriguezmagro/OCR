@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Search word in a file";
+}
+
+<div>
+    <div id="processing" style="display: none">Processing, only wait!</div>
+    <form enctype="multipart/form-data" method="post" asp-action="SearchWord" class="text-start">
+        <div class="mb-3">
+            <label for="fileRoute" class="form-label">Full local path to file</label>
+            <input type="text" name="fileRoute" class="form-control" id="fileRoute" placeholder="C:/Users/user/Documents/file.pdf" required>
+        </div>
+        <div class="mb-3">
+            <label for="searchedWord" class="form-label">Searched word</label>
+            <input type="text" name="searchedWord" class="form-control" id="searchedWord" required>
+        </div>
+        <div class="d-flex justify-content-between align-items-end">
+            <label class="bg-warning rounded p-1">Only supported on Windows operating systems.</label>
+            <input class="btn btn-primary" type="submit" value="Process file">
+        </div>
+    </form>
+</div>
